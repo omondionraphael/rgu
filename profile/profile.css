@@ -1,0 +1,352 @@
+/* Add Font Awesome CDN in your HTML file */
+/* Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Fallback font */
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ff8702;
+}
+
+.logo .logo-text {
+  font-size: 24px;
+}
+
+.logo .logo-subtext {
+  font-size: 24px;
+  color: #2dab84;
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9); /* White background overlay */
+  display: none; /* Hide the navigation group overlay by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-group {
+  display: none; /* Hide nav group by default */
+  flex-direction: column; /* Ensure nav group items stack vertically */
+}
+
+.nav-route {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-routes {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2dab84;
+}
+
+.auth-buttons a {
+  padding: 10px 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: white;
+  color: #ff8702;
+  border: 1px solid #ff8702;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.signup-button {
+  background-color: #ff8702;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.cancel-toggle {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .nav-overlay {
+    display: flex;
+  }
+
+  .nav-groups .mobile-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .nav-routes .mobile-nav ul li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cancel-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .auth-buttons.mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide desktop navigation on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  .auth-buttons a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  .signup-button {
+    margin-left: 0;
+  }
+  .nav-routes {
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+}
+.account-button {
+  background-color: transparent;
+  border: none;
+  color: #2dab84;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff8702;
+  padding: 10px 20px;
+}
+
+.account-button:hover {
+  color: #ff8702;
+}
+
+.account-button .fas {
+  margin-right: 5px; 
+}
+
+.profile-icon {
+  font-size: 32px;
+  margin-right: 10px;
+  color: #ff8702;
+
+}
+
+.fa-caret-down {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+
+
+.profile-section {
+    margin-top: 30px;
+    margin-left: 331px;
+    margin-right: 331px;
+  }
+  
+  .profile-form {
+    border: 2px solid #4b4949;
+    padding: 30px;
+
+  }
+  
+  .profile-form p {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    background-color: #ff8702;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .personal-heading{
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .profile-section {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+  }
+
+  .ingredient-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .ingredient-input input {
+    margin-right: 10px;
+    width: 70%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+  
+  .cancel-icon {
+    cursor: pointer;
+  }
+  .add-ingredient{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid #ff8702;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .add-ingredient:hover {
+    margin-top: 10px;
+    background-color: #ff8702;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+  }
+  .add-ingredient i {
+    margin-right: 10px;
+   
+  }
+  
+  .edit-icon{
+    margin-left: 30px;
+  }

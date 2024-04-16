@@ -1,0 +1,578 @@
+/* Add Font Awesome CDN in your HTML file */
+/* Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Fallback font */
+  
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ff8702;
+}
+
+.logo .logo-text {
+  font-size: 24px;
+}
+
+.logo .logo-subtext {
+  font-size: 24px;
+  color: #2dab84;
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9); /* White background overlay */
+  display: none; /* Hide the navigation group overlay by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-group {
+  display: none; /* Hide nav group by default */
+  flex-direction: column; /* Ensure nav group items stack vertically */
+}
+
+.nav-route {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-routes {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2dab84;
+}
+
+.auth-buttons a {
+  padding: 10px 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: white;
+  color: #ff8702;
+  border: 1px solid #ff8702;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.signup-button {
+  background-color: #ff8702;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.cancel-toggle {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .nav-overlay {
+    display: flex;
+  }
+
+  .nav-groups .mobile-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .nav-routes .mobile-nav ul li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cancel-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .auth-buttons.mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide desktop navigation on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  .auth-buttons a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  .signup-button {
+    margin-left: 0;
+  }
+  .nav-routes {
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+}
+.account-button {
+  background-color: transparent;
+  border: none;
+  color: #2dab84;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff8702;
+  padding: 10px 20px;
+}
+
+.account-button:hover {
+  color: #ff8702;
+}
+
+.account-button .fas {
+  margin-right: 5px;
+}
+
+.profile-icon {
+  font-size: 32px;
+  margin-right: 10px;
+  color: #ff8702;
+}
+
+.fa-caret-down {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+/* Add Recipe Styles */
+.add-recipe {
+  margin: 20px;
+  margin-left: 331px;
+  margin-right: 331px;
+  background-color: white;
+  box-shadow: black;
+  padding: 40px;
+}
+
+.add-recipe h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.add-recipe h3, p {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 34px;
+}
+.eat {
+  color: #ff8702;
+}
+
+.now {
+  color: #2dab84;
+}
+.recipe-info {
+  margin-top: 30px;
+}
+.ingredients{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.directions{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.nutrition{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+
+.form-groups {
+  margin-bottom: 20px;
+}
+
+.form-group label{
+  display: block;
+  margin-bottom: 5px;
+}
+.form-groups label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 70%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.form-groups textarea {
+  width: 80%;
+  padding: 8px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+.recipe-info{
+  display: block;
+  margin-bottom: 50px;
+}
+
+.add-recipe hr {
+  border: 1px solid #333;
+}
+
+.locations-dropdown {
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #ff8702;
+  width: 60%;
+  color: #ff8702;
+}
+
+/* .add-recipe input[type="text"],
+.add-recipe textarea,
+.add-recipe select {
+  width: 60%;
+  margin-bottom: 10px;
+} */
+
+.add-recipe .buttons {
+  margin-top: 20px;
+}
+
+.add-recipe .buttons button {
+  margin-right: 10px;
+}
+
+#file {
+  display: none;
+ }
+
+ .file-style {
+  font-family: 'Trebuchet MS';
+  width: 75%;
+  display: block;
+  background-color: #f5f4f4;
+  margin-left: 0;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px dashed #cdc8c8;
+ }
+
+ .file-style:hover {
+  background-color: rgb(228, 213, 213);
+ }
+ .ingredients-h2{
+  margin-bottom: 20px;
+ }
+ .directions-h2{
+  margin-bottom: 20px;
+ }
+ .nutrition-h2{
+  margin-bottom: 20px;
+ }
+
+ .ingredients-p{
+  color: #ff8702;
+ }
+
+ .ingredient-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ingredient-input input {
+  margin-right: 10px;
+  width: 70%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.cancel-icon {
+  cursor: pointer;
+}
+.add-ingredient{
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid #ff8702;
+  border-radius: 15px;
+}
+
+.add-ingredient:hover {
+  margin-top: 10px;
+  background-color: #ff8702;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+.add-ingredient i {
+  margin-right: 10px;
+ 
+}
+
+
+.step-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.step-input input {
+  margin-right: 10px;
+  width: 70%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.cancel-icon {
+  cursor: pointer;
+}
+.add-step{
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid #ff8702;
+  border-radius: 15px;
+}
+
+.add-step:hover {
+  margin-top: 10px;
+  background-color: #ff8702;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+
+.add-step i {
+  margin-right: 10px;
+ 
+}
+
+.nutrition-input {
+  display: block;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nutrition-inputs input{
+  display: block;
+  width: 70%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.nutrition-values{
+  display: flex;
+}
+.nutrition-values input{
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+
+.nutrition-values-one{
+  width: 33%
+}
+.nutrition-values-two, .nutrition-values-three {
+  width: 11%
+}
+
+.cancel-icon {
+  cursor: pointer;
+}
+.add-nutrition{
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid #ff8702;
+  border-radius: 15px;
+  
+}
+
+.add-nutrition:hover {
+  margin-top: 10px;
+  background-color: #ff8702;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+.add-nutrition i {
+  margin-right: 10px;
+ 
+}
+
+@media (max-width: 768px) {
+  .add-recipe {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    box-shadow: black;
+    padding: 20px;
+  }
+  .nutrition-values-one{
+    width: 29%
+  }
+  .nutrition-values-two, .nutrition-values-three {
+    width: 9%
+  }
+  .nutrition-inputs input{
+    display: block;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.buttons button {
+  margin-left: 10px; 
+  margin-top: 10px;
+  background-color:  #ff8702;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+

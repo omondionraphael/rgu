@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <span class="logo-text">Eat </span>
+            <span class="logo-subtext">Well</span>
+          </div>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <nav class="nav-route desktop-nav">
+            <ul>
+              <li><a href="../auth landing/authlanding.php">Home</a></li>
+              <li><a href="../authRecipe/authRecipe.php">Recipe</a></li>
+              <li><a href="../authAbout/authAbout.php">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons desktop-nav">
+              <button class="account-button"> <i class="fas fa-user-circle"></i> Account <i class="fas fa-caret-down"></i></button>
+              <div class="dropdown-content">
+                <a href="../addRecipe/addRecipe.php">Add Recipe</a>
+                <a href="../profile/profile.php">Profile</a>
+                <a id="logout" class="logout">Logout</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+      <div class="nav-overlay">
+        <div class="cancel-toggle">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="nav-groups mobile-nav">
+          <!-- Added mobile-nav class here -->
+          <nav class="nav-routes">
+            <ul>
+              <li><a href="../auth landing/authlanding.php">Home</a></li>
+              <li><a href="../authRecipe/authRecipe.php">Recipe</a></li>
+              <li><a href="../authAbout/authAbout.php">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="auth-buttons">
+            <!-- Removed mobile-nav class here -->
+            <button type="button" class="account-button"> <i class="fas fa-user-circle profile-icon"></i> Account <i class="fas fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Add Recipe</a>
+              <a href="../profile/profile.html">Profile</a>
+              <a href="#">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="profile-section">
+        <div class="profile-form">
+          <h1 class="personal-heading">Personal Info</h1>
+          <p>These details will be used for your profiles associated with your email address. By filling out this information, you will receive a more personalized experience across all our platforms.</p>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
+              <label for="fullname">Full Name:</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
+            </div>
+            
+          </form>
+          <!-- <h1 class="personal-heading">Change Password</h1> -->
+          <!-- <h1 class="personal-heading">Role</h1> -->
+          <form action="#" method="post">
+
+            <div class="form-group">
+              <label for="password">Role:</label>
+              <input type="text" id="role" readonly  name="role" placeholder="***********" required>
+            </div>
+
+            <!-- <div class="form-group">
+              <label for="password">Role:</label>
+              <input type="password" id="password" name="password" placeholder="***********" required>
+            </div>
+            <div class="form-group">
+              <label for="cpassword">Confirm Password:</label>
+              <input type="password" id="cpassword" name="cpassword" placeholder="***********" required>
+            </div> -->
+           
+          </form>
+          <!-- <h1 class="personal-heading">Manage Recipe</h1>
+          <form action="#" method="post">
+            <div class="ingredient-input">
+              <input type="text" placeholder="" />
+              <i class="fas fa-times cancel-icon"></i>
+              <i class="fas fa-edit edit-icon"></i>
+            </div>
+            <div class="ingredient-input">
+              <input type="text" placeholder="" />
+              <i class="fas fa-times cancel-icon"></i>
+              <i class="fas fa-edit edit-icon"></i>
+            </div>
+            <div class="ingredient-input">
+              <input type="text" placeholder="" />
+              <i class="fas fa-times cancel-icon"></i>
+              <i class="fas fa-edit edit-icon"></i>
+            </div> 
+            <div class="ingredient-input">
+              <input type="text" placeholder="" />
+              <i class="fas fa-times cancel-icon"></i>
+              <i class="fas fa-edit edit-icon"></i>
+            </div>
+            <button type="button" class="add-ingredient"> <i class="fas fa-plus"></i>Add Recipe </button>
+           
+          </form> -->
+          <button type="submit" id="updateProfile">Submit</button>
+          <div id="updateMessage"></div>
+          <!-- <button type="submit" class="pullRecord">Pull Record</button> -->
+        </div>
+      </section>
+      
+      <script type="text/javascript" src="profile.js"></script>
+</body>
+<!-- <script src="profile.js" defer></script> -->
+</html>

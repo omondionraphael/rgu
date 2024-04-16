@@ -1,0 +1,416 @@
+/* Add Font Awesome CDN in your HTML file */
+/* Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Fallback font */
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ff8702;
+}
+
+.logo .logo-text {
+  font-size: 24px;
+}
+
+.logo .logo-subtext {
+  font-size: 24px;
+  color: #2dab84;
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9); /* White background overlay */
+  display: none; /* Hide the navigation group overlay by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-group {
+  display: none; /* Hide nav group by default */
+  flex-direction: column; /* Ensure nav group items stack vertically */
+}
+
+.nav-route {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-routes {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2dab84;
+}
+
+.auth-buttons a {
+  padding: 10px 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: white;
+  color: #ff8702;
+  border: 1px solid #ff8702;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.signup-button {
+  background-color: #ff8702;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.cancel-toggle {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .nav-overlay {
+    display: flex;
+  }
+
+  .nav-groups .mobile-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .nav-routes .mobile-nav ul li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cancel-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .auth-buttons.mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide desktop navigation on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  .auth-buttons a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  .signup-button {
+    margin-left: 0;
+  }
+  .nav-routes {
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+}
+
+.recipe-container {
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 50px;
+}
+.choose-us-heading {
+  margin-bottom: 20px;
+}
+
+.star-ratings {
+  margin-top: 10px;
+}
+
+.star {
+  color: #ff8702;
+  font-size: 24px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  grid-gap: 20px; /* Gap between grid items */
+  margin-top: 40px;
+}
+
+.image-grids {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  grid-gap: 20px; /* Gap between grid items */
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.image-column-one img,
+.image-column-two img {
+  width: 100%; /* Ensure images fill their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-column-one,
+.image-column-two {
+  border: 1px solid #000; /* Border style for the image containers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recipe-one-heading{
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.recipe-text-one{
+  margin-top: 82px;
+  margin-bottom: 20px;
+}
+.recipe-text-one p{
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+
+@media (max-width: 768px) {
+  .image-grid, .image-grids {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust columns for smaller screens */
+  }
+  .recipe-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+}
+
+.section-heading {
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+@media (max-width: 768px) {
+
+  .section-heading {
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+.ingredient-list {
+  padding: 0;
+  margin-left: 60px;
+}
+
+.ingredient-list li {
+  margin-bottom: 15px;
+}
+
+.ingredient-list li strong {
+  color: #000; /* Orange color for ingredient titles */
+}
+
+
+
+.nutrition-facts {
+  display: flex;
+}
+
+.nutrition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.item-value {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.item-label {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+table {
+  width: 30%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+@media (max-width: 768px) {
+  table{
+    width: 100%;
+  }
+}
+
+
+
+.rating-container {
+  margin-top: 80px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  width: 30%;
+  margin-left: 120px;
+}
+
+h1 {
+  color: #ff8702; /* Your specified text color */
+}
+
+h3 {
+  color: #333;
+}
+
+.stars {
+  cursor: pointer;
+}
+
+.stars span {
+  font-size: 24px;
+  color: #ccc; 
+}
+
+.stars span:hover,
+.stars span:hover ~ span,
+.stars span.selected,
+.stars span.selected ~ span {
+  color: yellow;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff8702; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .rating-container {
+    margin-top: 80px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    width: 65%;
+    margin-left: 20px;
+  }
+}
+

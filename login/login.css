@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: flex;
+}
+.logo-text {
+  margin-left: 30px;
+}
+
+.eat-text {
+  color: #fffb02;
+  font-size: 40px;
+}
+
+.now-text {
+  color: #2dab84;
+  font-size: 40px;
+}
+
+.left-div {
+  flex: 1;
+  position: relative;
+}
+
+.h-screen-image {
+ 
+  width: 100%;
+}
+
+.right-div {
+  flex: 1;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.logo-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.create-account-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff8702;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.sign-up-form-container {
+  margin-top: 150px;
+  background-color: white;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 20px;
+}
+
+.sign-up-form-container h1{
+    color: black;
+}
+
+.sign-up-form-container h3,
+.sign-up-form-container h4 {
+  color: #b9b9b9;
+}
+
+.sign-up-form-container form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.sign-up-form-container input {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.sign-up-form-container a {
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+.reset-text {
+    color: #ff8702;
+    font-weight: bold;
+  
+}
+
+
+.sign-in-button {
+  background-color: #ff8702;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.5; 
+}
+
+.sign-in-button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .sign-up-form-container {
+        margin-top: 150px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      .logo-text {
+        margin-left: 10px;
+        margin-top: 0;
+      }
+      
+      .eat-text {
+        color: #ff8702;
+        font-size: 20px;
+      }
+      
+      .now-text {
+        color: #2dab84;
+        font-size: 20px;
+      }
+
+      .left-div {
+        display: none;
+      }
+      .right-div {
+        height: 100vh;
+        padding: 20px;
+        background-color: #e0e0e0;
+      }
+
+       
+}
+

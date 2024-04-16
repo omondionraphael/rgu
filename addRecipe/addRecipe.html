@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="addRecipe.css" />
+    <title>Add Recipe</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <span class="logo-text">Eat </span>
+          <span class="logo-subtext">Now</span>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-route desktop-nav">
+          <ul>
+            <li><a href="../auth landing/authlanding.html">Home</a></li>
+            <li><a href="../authRecipe/authRecipe.html">Recipe</a></li>
+            <li><a href="../authAbout/authAbout.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="auth-buttons desktop-nav">
+            <button class="account-button">
+              <i class="fas fa-user-circle"></i> Account
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="./addRecipe.html">Add Recipe</a>
+              <a href="../profile/profile.html">Profile</a>
+              <a href="#">Logout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="nav-overlay">
+      <div class="cancel-toggle">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="nav-groups mobile-nav">
+        <!-- Added mobile-nav class here -->
+        <nav class="nav-routes">
+          <ul>
+            <li><a href="../auth landing/authlanding.html">Home</a></li>
+            <li><a href="../authRecipe/authRecipe.html">Recipe</a></li>
+            <li><a href="../authAbout/authAbout.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <!-- Removed mobile-nav class here -->
+          <button type="button" class="account-button">
+            <i class="fas fa-user-circle profile-icon"></i> Account
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./addRecipe.html">Add Recipe</a>
+            <a href="../profile/profile.html">Profile</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="add-recipe">
+      <h1>Add a Recipe</h1>
+      <h3>
+        Uploading personal recipes is easy! Add yours to your favorites, share
+        with friends, family, or the <span class="eat">Eat</span
+        ><span class="now">Now</span> community.
+      </h3>
+      <hr />
+
+      <!-- Recipe Information -->
+      <div class="recipe-info">
+        <div class="form-group">
+          <label for="Recipe-Title">Recipe Title</label>
+          <input type="text" placeholder="Recipe Title" />
+        </div>
+
+        <div class="form-groups">
+          <label for="Recipe-Description">Description</label>
+          <textarea placeholder="Description" rows="10"></textarea>
+        </div>
+        <div class="form-groups">
+          <label for="file" class="file-style">
+            <img src="../assets/upload-img.png" width="50" alt="upload img" />
+            <p>Upload multiple Photos</p>
+          </label>
+          <input type="file" id="file" multiple />
+          <div id="file-preview"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="location" class="location-dropdown"
+            >select a location</label
+          >
+          <select id="location" class="locations-dropdown">
+            <option>select a location</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <hr />
+
+      <!-- Ingredients -->
+      <div class="ingredients">
+        <h2 class="ingredients-h2">Ingredients</h2>
+        <p>
+          Enter ingredients for recipe <br />
+          Enter one ingredient per line. Include the quantity (i.e. cups,
+          tablespoons) and any special preparation (i.e. sifted, softened,
+          chopped). Use optional headers to organize the different parts of the
+          recipe (i.e. Cake, Frosting, Dressing).
+        </p>
+        <p class="ingredients-p">Enter ingredients below or Add several at once</p>
+        <div class="ingredient-input">
+          <input type="text" placeholder="Add Ingredient" />
+          <i class="fas fa-times cancel-icon"></i>
+        </div>
+        <button type="button" class="add-ingredient"> <i class="fas fa-plus"></i>Add Ingredient </button>
+      </div>
+      <hr />
+
+      <!-- Directions -->
+      <div class="directions">
+        <h2 class="directions-h2">Directions</h2>
+        <p>
+          Explain how to make your recipe, including oven temperatures, baking
+          or cooking times, and pan sizes, etc. Use optional headers to organize
+          the different parts of the recipe (i.e. Prep, Bake, Decorate).
+        </p>
+        <p class="ingredients-p">Enter Directions below or Add several at once</p>
+        <div class="step-input">
+          <input type="text" placeholder="Add Step" />
+          <i class="fas fa-times cancel-icon"></i>
+        </div>
+        <button type="button" class="add-step"> <i class="fas fa-plus"></i>Add Step </button>
+      </div>
+      <hr />
+
+      <!-- Nutrition -->
+      <div class="nutrition">
+        <h2 class="nutrition-h2">Nutrition</h2>
+        <p>Give details on the health and nutritional facts of your recipe.</p>
+        <p class="ingredients-p">Enter nutritional facts below or Add several at once</p>
+        <div class="nutrition-input">
+          <div class="nutrition-inputs">
+            <input type="text" placeholder="Servings per recipe" />
+            <input type="text" placeholder="Calories" />
+          </div>
+          <div class="nutrition-values">
+            <input type="text" class="nutrition-values-one" placeholder="Nutrition Value" />
+            <input type="text" class="nutrition-values-two" placeholder="Value" />
+            <input type="text"class=" nutrition-values-three"  placeholder="%" />
+          </div>
+          <i class="fas fa-times cancel-icon"></i>
+        </div>
+        <button type="button" class="add-nutrition"> <i class="fas fa-plus"></i> Add Nutrition </button>
+      </div>
+      <hr />
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button class="cancel">Cancel</button>
+        <button class="submit">Submit</button>
+      </div>
+    </section>
+  </body>
+  <!-- <script src="addRecipe.js"></script> -->
+  <script src="addRecipex.js"></script>
+</html>
